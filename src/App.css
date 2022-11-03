@@ -1,0 +1,752 @@
+.loading {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.left-div1 {
+    height: 620px;
+    width: 320px;
+    border-radius: 0 60px 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));
+    background-size: 500%;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+@keyframes profile {
+    0% {
+        background-position: top left;
+    }
+    50% {
+        background-position: bottom right;
+    }
+    100% {
+        background-position: top left;
+    }
+}
+
+.left-div2 {
+    height: 600px;
+    width: 300px;
+    border-radius: 0 50px 50px 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-outer-div {
+    height: 800px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-outer-div {
+    height: 800px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-div {
+    height: 750px;
+    width: 900px;
+    border-radius: 80px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.halo-div {
+    height: 600px;
+    width: 750px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    background-color: black;
+}
+
+.buttons {
+    height: 600px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.lol {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));
+    background-size: 500%;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+.lol:hover {
+    height: 60px;
+    width: 220px;
+}
+
+.out-lol {
+    height: 80px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    font-size: small;
+    font-weight: bold;
+    background-color: black;
+    color: wheat;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: .3s;
+}
+  
+.button:hover {
+    height: 50px;
+    width: 210px;
+    border: none;
+    background-color: rgb(36, 40, 41);
+}
+
+.circle-out {
+    height: 50%;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle1 {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));  
+    background-size: 500%;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+.circle2 {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url("./Images/Funny 2.jpg");
+    background-size: cover;
+}
+
+.discription {
+    height: 150px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    height: 40%;
+    font-size: 60px;
+    color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    height: 40%;
+    font-size: 27px;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-buttons {
+    height: 15%;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-button {
+    height: 30px;
+    width: 100px;
+}
+
+.front-in {
+    height: 75%;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front-graph1 {
+    border-radius: 60px;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));  
+    background-size: 500%;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+.front-graph2 {
+    border-radius: 50px;
+    height: 480px;
+    width: 680px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.b1 {
+    height: 40px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.b2 {
+    height: 50%;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.b3l {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.b3r {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.b4 {
+    font-size: large;
+    color: wheat;
+}
+
+.b5 {
+    border-radius: 20px;
+    height: 10px;
+    width: 500px;
+    background-color: rgb(36, 40, 41);
+}
+
+.b6 {
+    border-radius: 20px;
+    height: 10px;
+    background-color: cyan;
+}
+
+.main {
+    border-radius: 50px;
+    height: 600px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    border: 3px solid white;
+}
+
+.about {
+    height: 150px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hedding {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: cyan;
+    font-size: x-large;
+}
+
+.message {
+    height: 120px;
+    width: 100%;
+    color: wheat;
+    font-size: medium;
+}
+
+.cv {
+    height: 80px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.out-link {
+    border-radius: 50px;
+    height: 200px;
+    width: 600px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left {
+    color: cyan;
+    height: 100px;
+    width: 10%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.right {
+    height: 100px;
+    width: 50%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.a {
+    color: rgb(227, 71, 71);
+}
+
+.a:hover {
+    color: rgb(205, 50, 50);
+}
+
+.under {
+    border-radius: 50px;
+    height: 230px;
+    width: 600px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inter {
+    border-radius: 50px;
+    height: 120px;
+    width: 600px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.school {
+    border-radius: 50px;
+    height: 120px;
+    width: 600px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hedding2 {
+    height: 50px;
+    width: 480px;
+    color: cyan;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.hedding3 {
+    height: 50px;
+    width: 480px;
+    color: cyan;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.hedding4 {
+    border-radius: 50px;
+    height: 70%;
+    width: 260px;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));  
+    background-size: 500%;
+    background-color: black;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content1 {
+    height: 40%;
+    width: 480px;
+    color: wheat;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.content2 {
+    height: 40px;
+    width: 480px;
+    color: wheat;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.out-acc {
+    height: 100px;
+    width: 750px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.acc1 {
+    height: 120px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.acc2 {
+    height: 80px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acc3 {
+    height: 100px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai1 {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));  
+    background-size: 500%;
+    background-color: black;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+.ai1:hover {
+    height: 80px;
+    width: 80px;
+}
+
+.ai2 {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai2:hover {
+    height: 70px;
+    width: 70px;
+    border: none;
+}
+
+.face1 {
+    color: wheat;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#line {
+    text-decoration: none;
+}
+
+.face2 {
+    color: wheat;
+}
+
+.my-left {
+    height: 100px;
+    width: 25%;
+    font-size: large;
+    color: cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.my-right {
+    height: 80px;
+    width: 60%;
+    font-size: large;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mail1 {
+    height: 600px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail2 {
+    border: none;
+    height: 500px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name1 {
+    height: 80px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.email1 {
+    height: 80px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.message1 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.send1 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.lable1 {
+    width: 450px;
+}
+
+.lable2 {
+    font-size: large;
+    color: cyan;
+}
+
+.name2 {
+    border: none;
+    color: wheat;
+    font-size: medium;
+    padding: 0 20px;
+    height: 40px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+}
+
+.email2 {
+    border: none;
+    color: wheat;
+    font-size: medium;
+    padding: 0 20px;
+    height: 40px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+}
+
+.message2 {
+    color: wheat;
+    font-size: medium;
+    resize: none;
+    border: none;
+    padding: 20px;
+    height: 110px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgb(36, 40, 41);
+}
+
+.send2 {
+    border: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    width: 200px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, rgba(249,15,216), 
+                                        rgba(245,67,119), 
+                                        rgba(252,28,28), 
+                                        rgba(255,195,13), 
+                                        rgba(114,251,89));  
+    background-size: 500%;
+    background-color: black;
+    background-position: top left;
+    animation: profile 10s ease-in-out infinite;
+    transition: .3s;
+}
+
+.send2:hover {
+    height: 50px;
+    width: 220px;
+}
+
+.row {
+    height: 20px;
+    width: 500px;
+    color: white;
+}
