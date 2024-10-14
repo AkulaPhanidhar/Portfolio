@@ -1,0 +1,30 @@
+.home {
+    height: 100vh;
+    width: 100vw;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* border: 1px solid red; */
+}
+
+.homeTitle {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    text-align: center;
+    z-index: 1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 10px 20px;
+    }
+
+    .homeTitle {
+        font-size: x-large;
+    }
+}

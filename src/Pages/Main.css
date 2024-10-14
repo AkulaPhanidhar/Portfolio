@@ -1,0 +1,70 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+}
+
+.navbarContainer {
+    position: fixed;
+    bottom: 30px;
+    z-index: 2;
+}
+
+.homeBackgroundWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.homeBackgroundName {
+    font-size: 15vw;
+    color: var(--maintext-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.darkModeButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#darkModeButton {
+    top: 10px;
+    left: 10px;
+}
+
+@media (max-width: 768px) {
+    .homeBackgroundName {
+        font-size: 15vw;
+    }
+
+    /* .darkModeButton {
+        top: 0px;
+        right: 0px;
+    }
+
+    #darkModeButton {
+        top: 0px;
+        left: 0px;
+    } */
+}

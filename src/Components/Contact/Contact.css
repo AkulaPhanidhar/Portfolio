@@ -1,0 +1,209 @@
+.contact {
+    padding: 30px 80px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background: var(--teriary-color) var(--contact-image) no-repeat center;
+}
+
+.contactLeftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contactText {
+    font-size: small;
+    color: var(--secondary-color);
+    text-align: center;
+    z-index: 1;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mail {
+    font-size: 50px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copyEmailButton {
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    color: var(--primary-color);
+    font-size: x-small;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyEmailButton:hover {
+    opacity: 1;
+}
+
+.cv {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.cv:hover {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.heroLinkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.heroLinkBox {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.2s ease-in-out;
+}
+
+.heroLinkBox:hover {
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.heroLinkIcon {
+    background: transparent;
+    transition: color 0.2s ease-in-out;
+    color: var(--secondary-color);
+}
+
+.heroLinkBox:hover .heroLinkIcon {
+    color: var(--primary-color);
+}
+
+.contactrightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contactInput {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: small;
+    font-weight: 300;
+    transition: 0.2s ease-in-out;
+}
+
+.contactInput::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.7;
+}
+
+.contactInput:focus {
+    outline: 1px solid var(--active-color);
+    border: 1px solid var(--active-color);
+}
+
+.contactButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    font-size: small;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.contactButton:hover {
+    transform: translateY(-5px);
+}
+
+/* .contactButton[disabled] {
+    opacity: 0.8;
+} */
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .heroLinkBox {
+        background: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
+
+    .heroLinkIcon {
+        color: var(--primary-color);
+    }
+
+    .mail {
+        font-size: x-large;
+    }
+
+    .contactText {
+        font-size: small;
+        text-align: start;
+    }
+
+    #contactText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .cv {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+    }
+
+    /* .contactInput {
+        font-size: x-small;
+    } */
+
+    /* .contactButton {
+        font-size: x-small;
+    } */
+
+    /* .heroLinkBox {
+        height: 30px;
+        width: 30px;
+    } */
+
+    /* .heroLinkIcon {
+        font-size: small;
+    } */
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  /* overflow-x: hidden; */
+}
+
+:root {
+  --primary-color: #F2F2F2;
+  --secondary-color: #1C1C1C;
+  --teriary-color: #FFFFFF;
+  --navbar-background: transparent;
+  --maintext-color: rgba(0, 0, 0, 0.1);
+  --active-color: #F64377;
+  --about-image: url("../src/Components/Images/LightAbout.png");
+  --project-image: url("../src/Components/Images/LightProjects.png");
+  --contact-image: url("../src/Components/Images/LightContact.png");
+  /* --black-project-image: url("../src/Components/Images/BlackProject1.png"); */
+  /* --color-project-image: url("../src/Components/Images/ColorProject1.png"); */
+}
+
+[data-theme='dark'] {
+  --primary-color: #1C1C1C;
+  --secondary-color: #F2F2F2;
+  --teriary-color: #000000;
+  --navbar-background: rgba(255, 255, 255, 0.1);
+  --maintext-color: #000000;
+  --active-color: #F64377;
+  --about-image: url("../src/Components/Images/DarkAbout.png");
+  --project-image: url("../src/Components/Images/DarkProjects.png");
+  --contact-image: url("../src/Components/Images/DarkContact.png");
+}
