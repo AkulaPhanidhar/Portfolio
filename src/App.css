@@ -13,31 +13,33 @@
 body {
   background: var(--primary-color);
   color: var(--secondary-color);
-  /* overflow-x: hidden; */
+}
+
+.link {
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 :root {
   --primary-color: #F2F2F2;
   --secondary-color: #1C1C1C;
+  --secondary-opacity-color: rgba(28, 28, 28, 0.8);
   --teriary-color: #FFFFFF;
   --navbar-background: transparent;
   --maintext-color: rgba(0, 0, 0, 0.1);
   --active-color: #F64377;
   --about-image: url("../src/Components/Images/LightAbout.png");
-  --project-image: url("../src/Components/Images/LightProjects.png");
   --contact-image: url("../src/Components/Images/LightContact.png");
-  /* --black-project-image: url("../src/Components/Images/BlackProject1.png"); */
-  /* --color-project-image: url("../src/Components/Images/ColorProject1.png"); */
 }
 
 [data-theme='dark'] {
   --primary-color: #1C1C1C;
   --secondary-color: #F2F2F2;
+  --secondary-opacity-color: rgba(242, 242, 242, 0.8);
   --teriary-color: #000000;
   --navbar-background: rgba(255, 255, 255, 0.1);
   --maintext-color: #000000;
   --active-color: #F64377;
   --about-image: url("../src/Components/Images/DarkAbout.png");
-  --project-image: url("../src/Components/Images/DarkProjects.png");
   --contact-image: url("../src/Components/Images/DarkContact.png");
 }

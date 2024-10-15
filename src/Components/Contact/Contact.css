@@ -31,20 +31,19 @@
 }
 
 .mail {
-    font-size: 50px;
+    font-size: 60px;
     color: var(--secondary-color);
     font-weight: 600;
     cursor: pointer;
 }
 
 .copyEmailButton {
-    background: var(--secondary-color);
+    background: var(--secondary-opacity-color);
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
     color: var(--primary-color);
     font-size: x-small;
-    opacity: 0.8;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     display: flex;
@@ -54,7 +53,7 @@
 }
 
 .copyEmailButton:hover {
-    opacity: 1;
+    background: var(--secondary-color);
 }
 
 .cv {
@@ -68,6 +67,7 @@
 }
 
 .heroLinkContainer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,30 +75,46 @@
 }
 
 .heroLinkBox {
-    height: 40px;
-    width: 40px;
-    border-radius: 50px;
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 10px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--secondary-color);
-    transition: 0.2s ease-in-out;
+    gap: 10px;
+    border: 1.5px dashed gray;
+    transition: transform 0.2s ease-in-out;
 }
 
-.heroLinkBox:hover {
-    background: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+#heroLinkBox1:hover {
+    transform: scale(1.05) translateY(-5px) translateX(-5px);
 }
 
-.heroLinkIcon {
-    background: transparent;
-    transition: color 0.2s ease-in-out;
+#heroLinkBox2:hover {
+    transform: scale(1.05) translateY(-5px) translateX(5px);
+}
+
+#heroLinkBox3:hover {
+    transform: scale(1.05) translateY(5px) translateX(-5px);
+}
+
+#heroLinkBox4:hover {
+    transform: scale(1.05) translateY(5px) translateX(5px);
+}
+
+.arrowIcon {
+    color: gray;
+    transition: transform 0.2s ease-in-out;
+}
+
+.heroLinkBox:hover .arrowIcon {
+    transform: rotate(45deg);
+}
+
+.contactLinkText {
+    font-size: large;
     color: var(--secondary-color);
-}
-
-.heroLinkBox:hover .heroLinkIcon {
-    color: var(--primary-color);
 }
 
 .contactrightContainer {
@@ -149,10 +165,6 @@
     transform: translateY(-5px);
 }
 
-/* .contactButton[disabled] {
-    opacity: 0.8;
-} */
-
 @media (max-width: 768px) {
     .contact {
         padding: 20px;
@@ -189,21 +201,4 @@
         text-decoration: underline;
         text-underline-offset: 7px;
     }
-
-    /* .contactInput {
-        font-size: x-small;
-    } */
-
-    /* .contactButton {
-        font-size: x-small;
-    } */
-
-    /* .heroLinkBox {
-        height: 30px;
-        width: 30px;
-    } */
-
-    /* .heroLinkIcon {
-        font-size: small;
-    } */
 }
