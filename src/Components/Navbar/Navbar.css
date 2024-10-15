@@ -1,25 +1,16 @@
 .navbar {
     overflow: hidden;
-    /* background: rgba(255, 255, 255, 0.2); */
     padding: 12px 50px;
-    background: var(--navbar-background);
     border-radius: 50px;
-    color: var(--secondary-color);
-    /* padding: 15px 30px;
-    border-bottom: 1px solid var(--secondary-color);
-    color: var(--secondary-color); */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: var(--secondary-color);
+    background: var(--navbar-background);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* background: rgba(255, 255, 255, 0.1); */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); */
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
-    /* box-shadow: 0 0px 10px rgba(255, 255, 255, 0.05); */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1); */
-
 }
 
 .navLinkContainer {
@@ -37,12 +28,11 @@
 
 .navLink.active {
     color: var(--active-color);
-    /* font-weight: 500; */
 }
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
 
     .navLinkContainer {

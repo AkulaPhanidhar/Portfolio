@@ -47,59 +47,37 @@ const About = () => {
   return (
     <>
       <div className="about">
-        <motion.div
-          className="aboutLeftContainer"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 120 }}
-        >
-          <motion.div
-            className="heroLeftTextBox"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{ y: 300, opacity: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-            <p className="heroSubText">Hello, it's</p>
-            <div className="heroNameContent">
-              <p className="heroTextTop">Phanidhar Akula</p>
-              <p className="heroText">Phanidhar Akula</p>
-            </div>
-            <motion.p
-              className="heroSubText"
-              animate={{ y: 0, opacity: 1 }}
-              initial={{ y: 300, opacity: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              I'm a <span className="animatedHeroSubText">{text}</span>
-            </motion.p>
-          </motion.div>
-          <motion.p
-            className="heroDescription"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{ y: 300, opacity: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-          >
-            I am a highly skilled full stack web developer and designer with a
-            strong proficiency in technologies such as Python, React JS, and
-            JavaScript. In addition to my development expertise, I excel in
-            design, utilizing tools like Figma for wireframing, prototyping, and
-            creating intuitive user experiences. With a passion for building
-            dynamic and scalable web applications, I focus on delivering
-            innovative solutions that align with business objectives. I am
-            committed to continuous learning, staying current with the latest
-            industry trends and best practices, and expanding my skill set in
-            both development and design.
-          </motion.p>
-          <div className="universityContainer">
-            <img
-              className="universityLogo"
-              src={universityLogo}
-              alt="University Logo"
-            />
-            <p className="universityName">Miami University</p>
-            <p className="universityDiscription">Masters in Computer Science</p>
+        <div className="heroLeftTextBox">
+          <p className="heroSubText">Hello, it's</p>
+          <div className="heroNameContent">
+            <p className="heroTextTop">Phanidhar Akula</p>
+            <p className="heroText">Phanidhar Akula</p>
           </div>
-        </motion.div>
+          <p className="heroSubText">
+            I'm a <span className="animatedHeroSubText">{text}</span>
+          </p>
+        </div>
+        <p className="heroDescription">
+          I am a highly skilled full stack web developer and designer with a
+          strong proficiency in technologies such as Python, React JS, and
+          JavaScript. In addition to my development expertise, I excel in
+          design, utilizing tools like Figma for wireframing, prototyping, and
+          creating intuitive user experiences. With a passion for building
+          dynamic and scalable web applications, I focus on delivering
+          innovative solutions that align with business objectives. I am
+          committed to continuous learning, staying current with the latest
+          industry trends and best practices, and expanding my skill set in both
+          development and design.
+        </p>
+        <div className="universityContainer">
+          <img
+            className="universityLogo"
+            src={universityLogo}
+            alt="University Logo"
+          />
+          <p className="universityName">Miami University</p>
+          <p className="universityDiscription">Masters in Computer Science</p>
+        </div>
       </div>
     </>
   );

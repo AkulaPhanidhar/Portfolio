@@ -1,15 +1,14 @@
 .contact {
     padding: 30px 80px;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
     background: var(--teriary-color) var(--contact-image) no-repeat center;
 }
 
-.contactLeftContainer {
+.contactContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +65,7 @@
     text-underline-offset: 7px;
 }
 
-.heroLinkContainer {
+.contactLinkContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -74,8 +73,8 @@
     gap: 20px;
 }
 
-.heroLinkBox {
-    min-width: 250px;
+.contactLinkBox {
+    min-width: 280px;
     padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -87,19 +86,19 @@
     transition: transform 0.2s ease-in-out;
 }
 
-#heroLinkBox1:hover {
+#contactLinkBox1:hover {
     transform: scale(1.05) translateY(-5px) translateX(-5px);
 }
 
-#heroLinkBox2:hover {
+#contactLinkBox2:hover {
     transform: scale(1.05) translateY(-5px) translateX(5px);
 }
 
-#heroLinkBox3:hover {
+#contactLinkBox3:hover {
     transform: scale(1.05) translateY(5px) translateX(-5px);
 }
 
-#heroLinkBox4:hover {
+#contactLinkBox4:hover {
     transform: scale(1.05) translateY(5px) translateX(5px);
 }
 
@@ -108,7 +107,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.heroLinkBox:hover .arrowIcon {
+.contactLinkBox:hover .arrowIcon {
     transform: rotate(45deg);
 }
 
@@ -117,88 +116,37 @@
     color: var(--secondary-color);
 }
 
-.contactrightContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.contactInput {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid var(--secondary-color);
-    width: 100%;
-    background: transparent;
-    color: var(--secondary-color);
-    font-size: small;
-    font-weight: 300;
-    transition: 0.2s ease-in-out;
-}
-
-.contactInput::placeholder {
-    color: var(--secondary-color);
-    opacity: 0.7;
-}
-
-.contactInput:focus {
-    outline: 1px solid var(--active-color);
-    border: 1px solid var(--active-color);
-}
-
-.contactButton {
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: 100%;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    border: 1px solid var(--secondary-color);
-    cursor: pointer;
-    font-size: small;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-}
-
-.contactButton:hover {
-    transform: translateY(-5px);
-}
-
 @media (max-width: 768px) {
     .contact {
-        padding: 20px;
-        gap: 40px;
-        flex-direction: column;
-    }
-
-    .heroLinkBox {
-        background: var(--secondary-color);
-        border: 1px solid var(--secondary-color);
-    }
-
-    .heroLinkIcon {
-        color: var(--primary-color);
+        padding: 30px;
     }
 
     .mail {
         font-size: x-large;
     }
 
-    .contactText {
-        font-size: small;
-        text-align: start;
+    .copyEmailButton {
+        padding: 7px 12px;
+        font-size: xx-small;
+    }
+
+    .contactLinkContainer {
+        flex-direction: column;
+        gap: 20px;
     }
 
     #contactText {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
         gap: 5px;
     }
 
-    .cv {
-        text-decoration: underline;
-        text-underline-offset: 7px;
+    #contactLinkBox1:hover,
+    #contactLinkBox2:hover,
+    #contactLinkBox3:hover,
+    #contactLinkBox4:hover {
+        transform: scale(1.05) translateY(-5px) translateX(0);
     }
 }

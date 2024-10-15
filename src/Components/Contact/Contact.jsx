@@ -8,6 +8,7 @@ import { RxArrowTopRight } from "react-icons/rx";
 import { LuFigma } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
 import { BiSolidCopy } from "react-icons/bi";
+import { FaCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Resume from "./../../PDF/Resume.pdf";
 
@@ -28,7 +29,9 @@ const Contact = () => {
     }
   }, [controls, inView]);
 
-  const fadeInUp = {
+  const isMobile = window.innerWidth < 768;
+
+  const fadeInUpDesktop = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -37,7 +40,18 @@ const Contact = () => {
     },
   };
 
-  const fadeInDown = {
+  const fadeInUpMobile = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
+  const chosenFadeInUp = isMobile ? fadeInUpMobile : fadeInUpDesktop;
+
+  const fadeInDownDesktop = {
     hidden: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
@@ -46,23 +60,32 @@ const Contact = () => {
     },
   };
 
+  const fadeInDownMobile = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
+  const chosenFadeInDown = isMobile ? fadeInDownMobile : fadeInDownDesktop;
+
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("akulaphanidhar03@gmail.com");
-    setCopyButtonText("Copied");
+    setCopyButtonText("Copied!");
     setTimeout(() => {
       setCopyButtonText("Copy Email");
     }, 2000);
   };
 
-  const isMobile = window.innerWidth < 768;
-
   return (
     <>
       <div className="contact">
-        <div className="contactLeftContainer" ref={ref}>
+        <div className="contactContainer" ref={ref}>
           <motion.p
             className="contactText"
-            variants={fadeInUp}
+            variants={chosenFadeInUp}
             initial="hidden"
             animate={controls}
           >
@@ -75,7 +98,7 @@ const Contact = () => {
 
           <motion.p
             className="mail"
-            variants={fadeInUp}
+            variants={chosenFadeInUp}
             initial="hidden"
             animate={controls}
           >
@@ -84,12 +107,16 @@ const Contact = () => {
 
           <motion.div
             className="copyEmailButtonContainer"
-            variants={fadeInUp}
+            variants={chosenFadeInUp}
             initial="hidden"
             animate={controls}
           >
             <button className="copyEmailButton" onClick={handleCopyEmail}>
-              <BiSolidCopy size={"15px"} />
+              {copyButtonText === "Copy Email" ? (
+                <BiSolidCopy size={isMobile ? "12px" : "15px"} />
+              ) : (
+                <FaCheck size={isMobile ? "12px" : "15px"} />
+              )}
               {copyButtonText}
             </button>
           </motion.div>
@@ -99,7 +126,7 @@ const Contact = () => {
           <motion.p
             className="contactText"
             id="contactText"
-            variants={fadeInUp}
+            variants={chosenFadeInUp}
             initial="hidden"
             animate={controls}
           >
@@ -113,8 +140,8 @@ const Contact = () => {
           {!isMobile && <br />}
 
           <motion.div
-            className="heroLinkContainer"
-            variants={fadeInDown}
+            className="contactLinkContainer"
+            variants={chosenFadeInDown}
             initial="hidden"
             animate={controls}
           >
@@ -123,8 +150,8 @@ const Contact = () => {
               target="_blank"
               className="link"
             >
-              <div className="heroLinkBox" id="heroLinkBox1">
-                <FaLinkedinIn size={"25px"} className="heroLinkIcon" />
+              <div className="contactLinkBox" id="contactLinkBox1">
+                <FaLinkedinIn size={"25px"} />
                 <p className="contactLinkText">Linkedin</p>
                 <br />
                 <RxArrowTopRight size={"30px"} className="arrowIcon" />
@@ -135,8 +162,8 @@ const Contact = () => {
               target="_blank"
               className="link"
             >
-              <div className="heroLinkBox" id="heroLinkBox2">
-                <FaGithub size={"25px"} className="heroLinkIcon" />
+              <div className="contactLinkBox" id="contactLinkBox2">
+                <FaGithub size={"25px"} />
                 <p className="contactLinkText">Github</p>
                 <br />
                 <RxArrowTopRight size={"30px"} className="arrowIcon" />
@@ -145,9 +172,9 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            className="heroLinkContainer"
+            className="contactLinkContainer"
             style={{ marginTop: "10px" }}
-            variants={fadeInUp}
+            variants={chosenFadeInUp}
             initial="hidden"
             animate={controls}
           >
@@ -156,8 +183,8 @@ const Contact = () => {
               target="_blank"
               className="link"
             >
-              <div className="heroLinkBox" id="heroLinkBox3">
-                <LuFigma size={"25px"} className="heroLinkIcon" />
+              <div className="contactLinkBox" id="contactLinkBox3">
+                <LuFigma size={"25px"} />
                 <p className="contactLinkText">Figma</p>
                 <br />
                 <RxArrowTopRight size={"30px"} className="arrowIcon" />
@@ -168,8 +195,8 @@ const Contact = () => {
               target="_blank"
               className="link"
             >
-              <div className="heroLinkBox" id="heroLinkBox4">
-                <SiLeetcode size={"25px"} className="heroLinkIcon" />
+              <div className="contactLinkBox" id="contactLinkBox4">
+                <SiLeetcode size={"25px"} />
                 <p className="contactLinkText">LeetCode</p>
                 <br />
                 <RxArrowTopRight size={"30px"} className="arrowIcon" />
