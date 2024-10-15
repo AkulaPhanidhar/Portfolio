@@ -15,6 +15,8 @@ import project3Image3 from "../Images/Project3Image3.png";
 import project3Image4 from "../Images/Project3Image4.png";
 
 const Playground = () => {
+  const isMobile = window.innerWidth < 768;
+
   return (
     <div className="playground">
       <div className="project">
@@ -72,9 +74,9 @@ const Playground = () => {
         </p>
         <br />
         <button className="projectButton">
-          Visit Site{" "}
+          Visit Site
           <FaArrowRight
-            size={"18px"}
+            size={isMobile ? "15px" : "18px"}
             style={{ color: "var(--primary-color)" }}
           />
         </button>
@@ -139,7 +141,7 @@ const Playground = () => {
         <button className="projectButton">
           Visit Site{" "}
           <FaArrowRight
-            size={"18px"}
+            size={isMobile ? "15px" : "18px"}
             style={{ color: "var(--primary-color)" }}
           />
         </button>
@@ -182,7 +184,7 @@ const Playground = () => {
         <button className="projectButton">
           Visit Site{" "}
           <FaArrowRight
-            size={"18px"}
+            size={isMobile ? "15px" : "18px"}
             style={{ color: "var(--primary-color)" }}
           />
         </button>

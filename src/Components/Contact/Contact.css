@@ -122,6 +122,7 @@
     }
 
     .mail {
+        text-decoration: none;
         font-size: x-large;
     }
 
@@ -147,6 +148,6 @@
     #contactLinkBox2:hover,
     #contactLinkBox3:hover,
     #contactLinkBox4:hover {
-        transform: scale(1.05) translateY(-5px) translateX(0);
+        transform: none;
     }
 }
