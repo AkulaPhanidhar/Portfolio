@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
-import { motion } from "framer-motion";
 import universityLogo from "../Images/Miami University.png";
 
 const professions = [
