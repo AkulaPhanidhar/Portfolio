@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Playground.css";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import project1Image1 from "../Images/Project1Image1.png";
 import project1Image2 from "../Images/Project1Image2.png";
 import project1Image3 from "../Images/Project1Image3.png";
@@ -14,63 +14,78 @@ import project3Image2 from "../Images/Project3Image2.png";
 import project3Image3 from "../Images/Project3Image3.png";
 import project3Image4 from "../Images/Project3Image4.png";
 
+const project1Images = [
+  project1Image1,
+  project1Image2,
+  project1Image3,
+  project1Image4,
+  project1Image5,
+  project1Image6,
+  project1Image7,
+  project1Image8,
+];
+
+const project3Images = [
+  project3Image1,
+  project3Image2,
+  project3Image3,
+  project3Image4,
+];
+
 const Playground = () => {
   const isMobile = window.innerWidth < 768;
+
+  // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageSet, setCurrentImageSet] = useState([]);
+
+  // Open modal function
+  const openModal = (imageSet, index) => {
+    setCurrentImageSet(imageSet);
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  // Close modal function
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Next image function
+  const nextImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % currentImageSet.length
+    );
+  };
+
+  // Previous image function
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? currentImageSet.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="playground">
       <div className="project">
         <div className="projectImageContainer">
-          <img
-            className="projectImage"
-            src={project1Image1}
-            alt="project1Image1"
-          />
-          <img
-            className="projectImage"
-            src={project1Image2}
-            alt="project1Image2"
-          />
-          <img
-            className="projectImage"
-            src={project1Image3}
-            alt="project1Image3"
-          />
-          <img
-            className="projectImage"
-            src={project1Image4}
-            alt="project1Image4"
-          />
-          <img
-            className="projectImage"
-            src={project1Image5}
-            alt="project1Image5"
-          />
-          <img
-            className="projectImage"
-            src={project1Image6}
-            alt="project1Image6"
-          />
-          <img
-            className="projectImage"
-            src={project1Image7}
-            alt="project1Image7"
-          />
-          <img
-            className="projectImage"
-            src={project1Image8}
-            alt="project1Image8"
-          />
+          {project1Images.map((image, index) => (
+            <img
+              key={index}
+              className="projectImage"
+              src={image}
+              alt={`project1Image${index + 1}`}
+              onClick={() => openModal(project1Images, index)} // Open modal on click
+            />
+          ))}
         </div>
         <br />
         <p className="projectTitle">Pathfinders Overseas Education</p>
         <p className="projectDescription">
           A website for an overseas education consultancy that provides
           comprehensive information and services to students seeking to study
-          abroad. The platform includes features such as university search,
-          application tracking, visa assistance, and personalized counseling. It
-          aims to simplify the process of studying abroad by offering a one-stop
-          solution for all the necessary steps and requirements.
+          abroad.
         </p>
         <br />
         <button className="projectButton">
@@ -84,62 +99,25 @@ const Playground = () => {
 
       <div className="project">
         <div className="projectImageContainer">
-          <img
-            className="projectImage"
-            src={project1Image1}
-            alt="project1Image1"
-          />
-          <img
-            className="projectImage"
-            src={project1Image2}
-            alt="project1Image2"
-          />
-          <img
-            className="projectImage"
-            src={project1Image3}
-            alt="project1Image3"
-          />
-          <img
-            className="projectImage"
-            src={project1Image4}
-            alt="project1Image4"
-          />
-          <img
-            className="projectImage"
-            src={project1Image5}
-            alt="project1Image5"
-          />
-          <img
-            className="projectImage"
-            src={project1Image6}
-            alt="project1Image6"
-          />
-          <img
-            className="projectImage"
-            src={project1Image7}
-            alt="project1Image7"
-          />
-          <img
-            className="projectImage"
-            src={project1Image8}
-            alt="project1Image8"
-          />
+          {project3Images.map((image, index) => (
+            <img
+              key={index}
+              className="projectImage"
+              src={image}
+              alt={`project3Image${index + 1}`}
+              onClick={() => openModal(project3Images, index)} // Open modal on click
+            />
+          ))}
         </div>
         <br />
-        <p className="projectTitle">CRM Portal for Pathfinders Overseas</p>
+        <p className="projectTitle">Spetech E-Commerce Website</p>
         <p className="projectDescription">
-          A customer relationship management (CRM) portal for an overseas
-          education consultancy that provides a centralized platform for
-          managing student data, applications, and communications. The portal
-          includes features such as student profiles, application status
-          tracking, document management, and messaging capabilities. It is
-          designed to streamline the consultancy's operations and enhance
-          customer service by providing a seamless and efficient experience for
-          students and staff.
+          An e-commerce platform for a tech startup that specializes in
+          sustainable and eco-friendly products.
         </p>
         <br />
         <button className="projectButton">
-          Visit Site{" "}
+          Visit Site
           <FaArrowRight
             size={isMobile ? "15px" : "18px"}
             style={{ color: "var(--primary-color)" }}
@@ -147,48 +125,27 @@ const Playground = () => {
         </button>
       </div>
 
-      <div className="project">
-        <div className="projectImageContainer">
-          <img
-            className="projectImage"
-            src={project3Image1}
-            alt="project1Image1"
-          />
-          <img
-            className="projectImage"
-            src={project3Image2}
-            alt="project1Image2"
-          />
-          <img
-            className="projectImage"
-            src={project3Image3}
-            alt="project1Image3"
-          />
-          <img
-            className="projectImage"
-            src={project3Image4}
-            alt="project1Image4"
-          />
+      {/* Full-screen image modal */}
+      {isModalOpen && (
+        <div className="modalOverlay" onClick={closeModal}>
+          <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+            <img
+              className="modalImage"
+              src={currentImageSet[currentImageIndex]}
+              alt={`ModalImage${currentImageIndex + 1}`}
+            />
+            <button className="prevButton" onClick={prevImage}>
+              <FaArrowLeft size="30px" />
+            </button>
+            <button className="nextButton" onClick={nextImage}>
+              <FaArrowRight size="30px" />
+            </button>
+            <button className="closeButton" onClick={closeModal}>
+              X
+            </button>
+          </div>
         </div>
-        <br />
-        <p className="projectTitle">Spetech E-Commerce Website</p>
-        <p className="projectDescription">
-          An e-commerce platform for a tech startup that specializes in
-          sustainable and eco-friendly products. The website features a
-          user-friendly interface with easy navigation, product categorization,
-          and secure payment gateways. It is designed to provide a seamless
-          shopping experience for customers looking to purchase eco-conscious
-          products and support sustainable practices.
-        </p>
-        <br />
-        <button className="projectButton">
-          Visit Site{" "}
-          <FaArrowRight
-            size={isMobile ? "15px" : "18px"}
-            style={{ color: "var(--primary-color)" }}
-          />
-        </button>
-      </div>
+      )}
     </div>
   );
 };

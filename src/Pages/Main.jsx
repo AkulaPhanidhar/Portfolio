@@ -74,18 +74,23 @@ const Main = () => {
       });
     }, options);
 
-    if (homeRef.current) observer.observe(homeRef.current);
-    if (aboutRef.current) observer.observe(aboutRef.current);
-    if (playgroundRef.current) observer.observe(playgroundRef.current);
-    if (contactRef.current) observer.observe(contactRef.current);
+    const homeRefCurrent = homeRef.current;
+    const aboutRefCurrent = aboutRef.current;
+    const playgroundRefCurrent = playgroundRef.current;
+    const contactRefCurrent = contactRef.current;
+
+    if (homeRefCurrent) observer.observe(homeRefCurrent);
+    if (aboutRefCurrent) observer.observe(aboutRefCurrent);
+    if (playgroundRefCurrent) observer.observe(playgroundRefCurrent);
+    if (contactRefCurrent) observer.observe(contactRefCurrent);
 
     const handleScroll = () => {
       const scrollPosition = window.pageYOffset + window.innerHeight / 2;
 
       const playgroundTop =
-        playgroundRef.current.getBoundingClientRect().top + window.pageYOffset;
+        playgroundRefCurrent.getBoundingClientRect().top + window.pageYOffset;
       const playgroundBottom =
-        playgroundTop + playgroundRef.current.offsetHeight;
+        playgroundTop + playgroundRefCurrent.offsetHeight;
 
       if (scrollPosition > playgroundTop && scrollPosition < playgroundBottom) {
         setActiveSection("Playground");
@@ -95,10 +100,10 @@ const Main = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      if (homeRef.current) observer.unobserve(homeRef.current);
-      if (aboutRef.current) observer.unobserve(aboutRef.current);
-      if (playgroundRef.current) observer.unobserve(playgroundRef.current);
-      if (contactRef.current) observer.unobserve(contactRef.current);
+      if (homeRefCurrent) observer.unobserve(homeRefCurrent);
+      if (aboutRefCurrent) observer.unobserve(aboutRefCurrent);
+      if (playgroundRefCurrent) observer.unobserve(playgroundRefCurrent);
+      if (contactRefCurrent) observer.unobserve(contactRefCurrent);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
