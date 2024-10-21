@@ -18,9 +18,19 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .home {
-        padding: 10px 20px;
+        padding: 50px;
+    }
+
+    .homeTitle {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding: 30px;
     }
 
     .homeTitle {

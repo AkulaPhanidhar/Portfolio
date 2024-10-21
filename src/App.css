@@ -15,6 +15,20 @@ body {
   color: var(--secondary-color);
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
 .link {
   text-decoration: none;
   color: var(--secondary-color);
@@ -27,7 +41,7 @@ body {
   --teriary-color: #FFFFFF;
   --navbar-background: transparent;
   --maintext-color: rgba(0, 0, 0, 0.1);
-  --active-color: #F64377;
+  --active-color: #FF9900;
   --about-image: url("../src/Components/Images/LightAbout.png");
   --contact-image: url("../src/Components/Images/LightContact.png");
 }

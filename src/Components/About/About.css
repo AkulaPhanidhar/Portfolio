@@ -1,5 +1,5 @@
 .about {
-    padding: 30px 80px;
+    padding: 80px;
     min-height: 100vh;
     width: 100vw;
     background: var(--teriary-color) var(--about-image) no-repeat center center / cover;
@@ -21,6 +21,7 @@
 
 .heroNameContent {
     position: relative;
+    cursor: pointer;
 }
 
 .heroTextTop {
@@ -81,11 +82,15 @@
     font-size: medium;
     color: var(--secondary-color);
     margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .animatedHeroSubText {
-    font-size: large;
-    margin-left: 5px;
+    font-weight: 500;
 }
 
 .heroSubText .cursor {
@@ -102,11 +107,12 @@
 }
 
 .heroDescription {
-    width: 80%;
+    width: 100%;
     font-size: small;
     font-weight: 300;
     text-align: center;
     line-height: 20px;
+    cursor: pointer;
     color: var(--secondary-color);
 }
 
@@ -136,8 +142,17 @@
     color: var(--secondary-color);
 }
 
+@media screen and (max-width: 1024px) {
+    .about {
+        padding: 50px;
+    }
 
-@media (max-width: 768px) {
+    .universityLogo {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .about {
         padding: 30px;
     }
@@ -146,7 +161,6 @@
     }
 
     .heroDescription {
-        width: 100%;
         font-size: x-small;
         line-height: 18px;
     }
@@ -159,11 +173,7 @@
         font-size: medium;
     }
 
-    .universityContainer {
-        width: 100%;
-    }
-
     .universityLogo {
-        width: 30%;
+        width: 35%;
     }
 }

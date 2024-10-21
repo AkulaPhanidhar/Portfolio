@@ -15,10 +15,13 @@
 
 .homeBackgroundWrapper {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .homeBackgroundName {
@@ -26,15 +29,12 @@
     color: var(--maintext-color);
     font-weight: bold;
     text-transform: uppercase;
-    white-space: nowrap;
     cursor: pointer;
-    transform-origin: center;
 }
 
+.homeButton,
 .darkModeButton {
     position: fixed;
-    top: 10px;
-    right: 10px;
     border-radius: 50%;
     border: none;
     background: none;
@@ -45,26 +45,27 @@
     align-items: center;
     font-size: medium;
     cursor: pointer;
+    color: var(--secondary-color);
     z-index: 2;
 }
 
-#darkModeButton {
+.homeButton {
     top: 10px;
     left: 10px;
 }
 
-@media (max-width: 768px) {
+.darkModeButton {
+    top: 10px;
+    right: 10px;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
     .homeBackgroundName {
-        font-size: 15vw;
+        margin-bottom: 70px;
     }
-
-    /* .darkModeButton {
-        top: 0px;
-        right: 0px;
-    }
-
-    #darkModeButton {
-        top: 0px;
-        left: 0px;
-    } */
 }

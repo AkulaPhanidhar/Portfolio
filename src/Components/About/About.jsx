@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { delay, motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./About.css";
-import { motion } from "framer-motion";
 import universityLogo from "../Images/Miami University.png";
 
 const professions = [
@@ -15,10 +16,71 @@ const About = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [startTyping, setStartTyping] = useState(false);
 
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const nameVariants = {
+    hidden: { opacity: 0, rotateX: 90, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      rotateX: 0,
+      scale: 1,
+      transition: {
+        duration: 1,
+        ease: [0.42, 0, 0.58, 1],
+      },
+    },
+  };
+
+  const textRevealVariants = {
+    hidden: { opacity: 0, x: "-100%" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+        delay: 0.2,
+      },
+    },
+  };
+
+  const bounceVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+        delay: 0.8,
+      },
+    },
+  };
+
+  const staggerContainer = {
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   useEffect(() => {
     const startTimeout = setTimeout(() => {
       setStartTyping(true);
-    }, 1200);
+    }, 800);
 
     return () => clearTimeout(startTimeout);
   }, []);
@@ -36,7 +98,7 @@ const About = () => {
       } else {
         setText(professions[currentIndex].substring(0, text.length + 1));
         if (text === professions[currentIndex]) {
-          setTimeout(() => setIsDeleting(true), 2000);
+          setTimeout(() => setIsDeleting(true), 1500);
         }
       }
     }, 30);
@@ -46,18 +108,33 @@ const About = () => {
 
   return (
     <>
-      <div className="about">
-        <div className="heroLeftTextBox">
+      <motion.div
+        className="about"
+        ref={ref}
+        variants={staggerContainer}
+        initial="hidden"
+        animate={controls}
+      >
+        <motion.div
+          className="heroLeftTextBox"
+          custom={0}
+          variants={nameVariants}
+        >
           <p className="heroSubText">Hello, it's</p>
-          <div className="heroNameContent">
+          <motion.div className="heroNameContent" variants={nameVariants}>
             <p className="heroTextTop">Phanidhar Akula</p>
             <p className="heroText">Phanidhar Akula</p>
-          </div>
+          </motion.div>
           <p className="heroSubText">
             I'm a <span className="animatedHeroSubText">{text}</span>
           </p>
-        </div>
-        <p className="heroDescription">
+        </motion.div>
+
+        <motion.p
+          className="heroDescription"
+          custom={1}
+          variants={textRevealVariants}
+        >
           I am a highly skilled full stack web developer and designer with a
           strong proficiency in technologies such as Python, React JS, and
           JavaScript. In addition to my development expertise, I excel in
@@ -68,17 +145,22 @@ const About = () => {
           committed to continuous learning, staying current with the latest
           industry trends and best practices, and expanding my skill set in both
           development and design.
-        </p>
-        <div className="universityContainer">
-          <img
+        </motion.p>
+
+        <motion.div
+          className="universityContainer"
+          custom={2}
+          variants={bounceVariants}
+        >
+          <motion.img
             className="universityLogo"
             src={universityLogo}
             alt="University Logo"
           />
           <p className="universityName">Miami University</p>
           <p className="universityDiscription">Masters in Computer Science</p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

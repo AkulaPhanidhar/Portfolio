@@ -1,16 +1,13 @@
 .navbar {
     overflow: hidden;
     padding: 12px 50px;
-    border-radius: 50px;
+    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: var(--secondary-color);
-    background: var(--navbar-background);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    color: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .navLinkContainer {
@@ -30,7 +27,17 @@
     color: var(--active-color);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 40px;
+    }
+
+    .navLinkContainer {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .navbar {
         padding: 10px 30px;
     }
