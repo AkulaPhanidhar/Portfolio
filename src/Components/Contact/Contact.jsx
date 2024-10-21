@@ -14,7 +14,7 @@ import { LuFigma } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
 import { BiSolidCopy } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import Resume from "../../PDF/Resume.pdf";
+import Resume from "../PDF/Resume.pdf";
 
 const Contact = () => {
   const [copyButtonText, setCopyButtonText] = useState("Copy Email");
@@ -62,8 +62,24 @@ const Contact = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      scale: 0.95,
+      rotateX: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.6, -0.05, 0.01, 0.99],
+        damping: 20,
+        stiffness: 300,
+      },
+    },
   };
 
   const contactLinkAnimation = (x, y) => ({

@@ -1,5 +1,5 @@
 .playground {
-    padding: 50px;
+    padding: 80px;
     min-height: 100vh;
     width: 100vw;
     background: var(--primary-color);
@@ -7,165 +7,123 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 50px;
+    gap: 80px;
 }
-
+  
 .project {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 20px;
+    gap: 30px;
     border-radius: 20px;
     width: 100%;
     background: var(--primary-color);
 }
-
+  
 .projectImageContainer {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    padding: 10px;
     border-radius: 10px;
-    overflow: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-
+  
 .projectImageContainer::-webkit-scrollbar {
-    height: 0px;
+    display: none;
 }
-
+  
 .projectImage {
     width: 45%;
     cursor: pointer;
     border-radius: 10px;
     object-fit: cover;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-
+  
 .projectTitle {
+    width: 80%;
     font-size: xx-large;
     font-weight: 600;
     cursor: pointer;
     color: var(--secondary-color);
+    text-align: center;
 }
-
+  
 .projectDescription {
-    width: 75%;
     text-align: center;
     line-height: 20px;
     font-size: small;
     font-weight: 300;
-    cursor: pointer;
-    color: var(--secondary-color);
 }
-
+  
 .projectButton {
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: none;
     background: var(--secondary-color);
     color: var(--primary-color);
     font-size: small;
     display: flex;
+    font-weight: 300;
     justify-content: center;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
-
+  
 .projectButton:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: translateY(-5px);
 }
-
-.modalOverlay {
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .modalContent {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modalImage {
-    max-width: 80%;
-    max-height: 80%;
-  }
-  
-  .prevButton,
-  .nextButton {
-    position: absolute;
-    top: 50%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .prevButton {
-    left: 10px;
-  }
-  
-  .nextButton {
-    right: 10px;
-  }
-  
-  .closeButton {
-    position: absolute;
-    padding: 10px;
-    border-radius: 50%;
-    top: -50px;
-    border: none;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .playground {
-        padding: 0px;
-        gap: 20px;
+        padding: 50px;
     }
-
+  
+    .projectImageContainer {
+        border-radius: 5px;
+    }
+  
+    .projectImage {
+        width: 90%;
+    }
+  
+    .projectTitle {
+        width: 100%;
+        font-size: x-large;
+    }
+  
+    .projectDescription {
+        font-size: small;
+        line-height: 18px;
+    }
+  
+    .projectButton:hover {
+        transform: none;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .playground {
+        padding: 30px;
+    }
+  
     .projectImageContainer {
         gap: 10px;
     }
-
-    .projectImage {
-        width: 90%;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    }
-
+  
     .projectTitle {
         font-size: large;
     }
-
+  
     .projectDescription {
-        width: 100%;
         font-size: x-small;
         line-height: 18px;
-    }
-
-    .projectButton {
-        padding: 10px 15px;
-        font-size: x-small;
     }
 }

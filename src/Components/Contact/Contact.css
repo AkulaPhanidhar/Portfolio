@@ -130,7 +130,7 @@
     color: var(--secondary-color);
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .contact {
         padding: 50px;
     }
@@ -166,7 +166,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact {
         padding: 30px;
     }
