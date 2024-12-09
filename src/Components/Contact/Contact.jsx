@@ -14,7 +14,7 @@ import { LuFigma } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
 import { BiSolidCopy } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import Resume from "../PDF/Resume.pdf";
+import Resume from "../PDF/Phanidhar_Akula_Resume.pdf";
 
 const Contact = () => {
   const [copyButtonText, setCopyButtonText] = useState("Copy Email");
@@ -153,7 +153,11 @@ const Contact = () => {
           <br />
           <p className="contactText" id="contactText">
             Are you interested in a long-term relationship?
-            <a href={Resume} download="Resume.pdf" className="cv">
+            <a
+              href={Resume}
+              download="Phanidhar_Akula_Resume.pdf"
+              className="cv"
+            >
               Download my CV
             </a>
           </p>
