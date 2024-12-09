@@ -1,5 +1,5 @@
 .playground {
-    padding: 80px;
+    padding: 70px;
     min-height: 100vh;
     width: 100vw;
     background: var(--primary-color);
@@ -22,6 +22,7 @@
 }
   
 .projectImageContainer {
+    padding: 10px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -33,16 +34,17 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-  
+
 .projectImageContainer::-webkit-scrollbar {
     display: none;
 }
-  
+
 .projectImage {
     width: 45%;
     cursor: pointer;
     border-radius: 10px;
     object-fit: cover;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
   
 .projectTitle {
@@ -83,7 +85,7 @@
   
 @media screen and (max-width: 1024px) {
     .playground {
-        padding: 50px;
+        padding: 40px;
     }
   
     .projectImageContainer {
@@ -111,7 +113,7 @@
   
 @media screen and (max-width: 768px) {
     .playground {
-        padding: 30px;
+        padding: 20px;
     }
   
     .projectImageContainer {

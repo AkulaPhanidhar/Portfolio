@@ -13,10 +13,13 @@ import project1Image5 from "../Images/Project1Image5.png";
 import project1Image6 from "../Images/Project1Image6.png";
 import project1Image7 from "../Images/Project1Image7.png";
 import project1Image8 from "../Images/Project1Image8.png";
-import project2Image1 from "../Images/Project1Image1.png";
-import project2Image2 from "../Images/Project1Image2.png";
-import project2Image3 from "../Images/Project1Image3.png";
-import project2Image4 from "../Images/Project1Image4.png";
+import project2Image1 from "../Images/Project2Image1.png";
+import project2Image2 from "../Images/Project2Image2.png";
+import project2Image3 from "../Images/Project2Image3.png";
+import project2Image4 from "../Images/Project2Image4.png";
+import project2Image5 from "../Images/Project2Image5.png";
+import project2Image6 from "../Images/Project2Image6.png";
+import project2Image7 from "../Images/Project2Image7.png";
 import project3Image1 from "../Images/Project3Image1.png";
 import project3Image2 from "../Images/Project3Image2.png";
 import project3Image3 from "../Images/Project3Image3.png";
@@ -38,6 +41,9 @@ const project2Images = [
   project2Image2,
   project2Image3,
   project2Image4,
+  project2Image5,
+  project2Image6,
+  project2Image7,
 ];
 
 const project3Images = [
@@ -130,13 +136,13 @@ const Playground = () => {
         images={project2Images}
         title="Pathfinders CRM Portal"
         description="A CRM portal for Pathfinders that manages client relationships, offering services for overseas education consultations."
-        link="https://crm.pathfinders.com"
+        link="https://github.com/AkulaPhanidhar"
       />
       <Project
         images={project3Images}
         title="Spetech E-Commerce Website"
         description="An e-commerce platform for a tech startup that specializes in sustainable and eco-friendly products."
-        link="https://spetech.com"
+        link="https://github.com/AkulaPhanidhar/Spetech-E-commerce.git"
       />
     </div>
   );

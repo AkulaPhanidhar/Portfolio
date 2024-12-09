@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { delay, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./About.css";
 import universityLogo from "../Images/Miami University.png";
